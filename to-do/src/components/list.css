@@ -1,0 +1,28 @@
+
+
+  
+  .layout__list{
+    margin: 10px 0px 10px 485px;
+    width: 400px;
+    list-style-type: none;
+   
+  }
+  
+  .card {
+    box-shadow: 3px 5px lightgrey;
+    border: 1px solid lightgrey;
+    background-color: white;
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .category {
+   font-family: 'Outfit', sans-serif;
+  }
+  
