@@ -17,6 +17,19 @@
     padding-top: 5px;
     padding-bottom: 15px;
   }
+  .delete {
+    margin-right: 1em;
+    margin-top: 5px;
+    width: 10px;
+    border: none;
+    color: red;
+    background-color: white;
+  }
+ 
+  .delete:hover{
+    cursor: pointer;
+  }
+
   
   .card:hover {
     transform: scale(1.1);

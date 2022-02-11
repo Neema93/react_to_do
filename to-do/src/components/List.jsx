@@ -33,7 +33,7 @@ import './list.css'
         }, []);
         const allName = name.map((item) => {
           console.log("items",item);
-          return <li class="card">{item.name}<button onClick={() => handleDeleteClick(item.id)}>X</button></li> ;
+          return <li class="card">{item.name}<button class="delete"onClick={() => handleDeleteClick(item.id)}>X</button></li> ;
         });
      
       return (
