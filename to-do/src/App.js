@@ -7,11 +7,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <h1>Welcome my todo list</h1>
+        <h1>Welcome my todo list</h1>
       </header>
       <body>
-<Input />
-<List />
+        <Input />
+        <List />
       </body>
     </div>
   );

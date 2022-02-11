@@ -24,7 +24,16 @@ module.exports = (db) => {
     )
       .then(res => console.log(res.rows));
   })
+  router.delete("/deletetodo/:id", (req,res) => {
+      console.log(req.params)
+    const id  = req.params.id;
+    console.log(id)
+    db.query(
+        ` DELETE FROM todo WHERE id = $1; `,[id]
+    )
 
+    .then(res => console.log(res.rows));
+  })
 
   return router;
 };
