@@ -9,7 +9,10 @@
   }
   
   .card {
+    display: flex;
+    justify-content: space-between;
     box-shadow: 3px 5px lightgrey;
+ 
     border: 1px solid lightgrey;
     background-color: white;
     margin-top: 10px;
@@ -22,7 +25,7 @@
     margin-top: 5px;
     width: 10px;
     border: none;
-    color: red;
+   
     background-color: white;
   }
  

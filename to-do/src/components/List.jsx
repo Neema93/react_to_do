@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState,useEffect } from "react";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import './list.css'
   export default function List() {
     const [name, setName] = useState([]);
@@ -33,7 +34,8 @@ import './list.css'
         }, []);
         const allName = name.map((item) => {
           console.log("items",item);
-          return <li class="card">{item.name}<button class="delete"onClick={() => handleDeleteClick(item.id)}>X</button></li> ;
+          return <li class="card"><label>{item.name}</label>
+          <button class="delete"onClick={() => handleDeleteClick(item.id)}><FontAwesomeIcon icon={faTrash} /></button></li> ;
         });
      
       return (
