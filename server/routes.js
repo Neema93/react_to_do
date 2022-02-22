@@ -34,6 +34,16 @@ module.exports = (db) => {
 
     .then(res => console.log(res.rows));
   })
+  router.patch("/updatetodo/:id",(req,res) => {
+    console.log(req.params)
+    const id  = req.params.id;
+    console.log(id)
+    db.query(
+        ` UPDATE todo SET checked = true WHERE id = $1; `,[id]
+    )
+
+    .then(res => console.log(res.rows));
+  })
 
   return router;
 };

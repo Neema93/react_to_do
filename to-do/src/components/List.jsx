@@ -21,7 +21,7 @@ export default function List() {
   function handleUpadateClick(id){
     console.log(id)
     // const todoId = id;
-    axios.delete(`http://localhost:3001/api/deletetodo/${id}`)
+    axios.patch(`http://localhost:3001/api/updatetodo/${id}`)
       .then((res) => {
         console.log(res);
 
@@ -46,9 +46,12 @@ export default function List() {
   }, []);
   const allName = name.map((item) => {
     console.log("items", item);
-    return <li class="card">
-      {item.checked ? handleUpadateClick(item.id): false}
-      <label>{item.name}</label>
+    return <li className="card">
+       <div className={item.checked ? handleUpadateClick(item.id)+"strike" : ""}>
+       <label>{item.name}</label>
+       </div>
+      {/* {item.checked ? handleUpadateClick(item.id): false} */}
+      
       <button class="delete" onClick={() => handleDeleteClick(item.id)}><FontAwesomeIcon icon={faTrash} /></button>
     </li>;
   });
