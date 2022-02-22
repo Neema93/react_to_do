@@ -18,6 +18,19 @@ export default function List() {
       })
     refreshPage();
   }
+  function handleUpadateClick(id){
+    console.log(id)
+    // const todoId = id;
+    axios.delete(`http://localhost:3001/api/deletetodo/${id}`)
+      .then((res) => {
+        console.log(res);
+
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+    refreshPage();
+  }
   function refreshPage() {
     window.location.reload(false);
   }
@@ -33,8 +46,11 @@ export default function List() {
   }, []);
   const allName = name.map((item) => {
     console.log("items", item);
-    return <li class="card"><label>{item.name}</label>
-      <button class="delete" onClick={() => handleDeleteClick(item.id)}><FontAwesomeIcon icon={faTrash} /></button></li>;
+    return <li class="card">
+      {item.checked ? handleUpadateClick(item.id): false}
+      <label>{item.name}</label>
+      <button class="delete" onClick={() => handleDeleteClick(item.id)}><FontAwesomeIcon icon={faTrash} /></button>
+    </li>;
   });
 
   return (

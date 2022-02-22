@@ -1,5 +1,6 @@
 
 import './App.css';
+import Date from './components/Date';
 import Input from './components/Input';
 import List from './components/List';
 function App() {
@@ -11,6 +12,7 @@ function App() {
       </header>
       <body>
         <Input />
+        <Date />
         <List />
       </body>
     </div>

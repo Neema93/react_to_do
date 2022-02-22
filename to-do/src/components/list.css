@@ -1,18 +1,12 @@
-
-
-  
   .layout__list{
     margin: 10px 0px 10px 485px;
     width: 400px;
     list-style-type: none;
-   
   }
-  
   .card {
     display: flex;
     justify-content: space-between;
     box-shadow: 3px 5px lightgrey;
- 
     border: 1px solid lightgrey;
     background-color: white;
     margin-top: 10px;
@@ -28,17 +22,34 @@
    
     background-color: white;
   }
- 
   .delete:hover{
     cursor: pointer;
   }
-
-  
   .card:hover {
     transform: scale(1.1);
   }
-  
   .category {
    font-family: 'Outfit', sans-serif;
   }
+  /* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
   
