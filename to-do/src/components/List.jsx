@@ -47,12 +47,13 @@ export default function List() {
   const allName = name.map((item) => {
     console.log("items", item);
     return <li className="card">
-       <div className={item.checked ? handleUpadateClick(item.id)+"strike" : ""}>
+      <button className="update" onClick={() => handleUpadateClick(item.id)}>√</button>
+       <div className={item.checked ? "strike" : ""}>
        <label>{item.name}</label>
        </div>
       {/* {item.checked ? handleUpadateClick(item.id): false} */}
       
-      <button class="delete" onClick={() => handleDeleteClick(item.id)}><FontAwesomeIcon icon={faTrash} /></button>
+      <button className="delete" onClick={() => handleDeleteClick(item.id)}><FontAwesomeIcon icon={faTrash} /></button>
     </li>;
   });
 

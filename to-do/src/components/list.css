@@ -19,10 +19,19 @@
     margin-top: 5px;
     width: 10px;
     border: none;
-   
     background-color: white;
   }
   .delete:hover{
+    cursor: pointer;
+  }
+  .update {
+    margin-right: 1em;
+    margin-top: 5px;
+    width: 10px;
+    border: none;
+    background-color: white;
+  }
+  .update:hover{
     cursor: pointer;
   }
   .card:hover {
@@ -34,25 +43,4 @@
   .strike {
     text-decoration: line-through;
  }
-  /* When clicked on, add a background color and strike out text
-.checked {
-  background: #888;
-  color: #fff;
-  text-decoration: line-through;
-}
-
-Add a "checked" mark when clicked on
-.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-} */
-
-  
+   
